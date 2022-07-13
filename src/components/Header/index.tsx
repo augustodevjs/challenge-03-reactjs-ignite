@@ -10,7 +10,6 @@ const Header = (): JSX.Element => {
   const { cart } = useCart();
 
   const cartSize = cart.filter((data, index) => {
-    console.log(data, index)
     return cart.indexOf(data) === index;
   })
 
