@@ -8,8 +8,15 @@ import { useCart } from '../../hooks/useCart';
 
 const Header = (): JSX.Element => {
   const { cart } = useCart();
+<<<<<<< HEAD
   console.log(cart);
   // const cartSize = // TODO;
+=======
+
+  const cartSize = cart.filter((data, index) => {
+    return cart.indexOf(data) === index;
+  })
+>>>>>>> 9fb6bbd020ff76c273834a46cd8097fd9f02f912
 
   return (
     <Container>
@@ -21,7 +28,7 @@ const Header = (): JSX.Element => {
         <div>
           <strong>Meu carrinho</strong>
           <span data-testid="cart-size">
-            {/* {cartSize === 1 ? `${cartSize} item` : `${cartSize} itens`} */}
+            {cartSize.length === 1 ? `${cartSize.length} item` : `${cartSize.length} itens`}
           </span>
         </div>
         <MdShoppingBasket size={36} color="#FFF" />
