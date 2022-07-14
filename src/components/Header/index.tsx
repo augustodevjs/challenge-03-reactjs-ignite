@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
 
@@ -8,15 +7,10 @@ import { useCart } from '../../hooks/useCart';
 
 const Header = (): JSX.Element => {
   const { cart } = useCart();
-<<<<<<< HEAD
-  console.log(cart);
-  // const cartSize = // TODO;
-=======
 
   const cartSize = cart.filter((data, index) => {
     return cart.indexOf(data) === index;
-  })
->>>>>>> 9fb6bbd020ff76c273834a46cd8097fd9f02f912
+  });
 
   return (
     <Container>

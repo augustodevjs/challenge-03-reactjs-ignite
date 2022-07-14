@@ -27,9 +27,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
     if (storagedCart) {
       return JSON.parse(storagedCart);
-    } else {
-      return [];
-    }
+    } 
 
     return [];
   });
@@ -39,9 +37,6 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
   }, [cart]);
 
   console.log(cart)
-
-
-
 
   const addProduct = async (productId: number) => {
     try {
