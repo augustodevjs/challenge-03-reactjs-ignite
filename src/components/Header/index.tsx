@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
 
@@ -11,7 +10,7 @@ const Header = (): JSX.Element => {
 
   const cartSize = cart.filter((data, index) => {
     return cart.indexOf(data) === index;
-  })
+  });
 
   return (
     <Container>

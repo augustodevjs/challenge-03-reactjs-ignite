@@ -27,9 +27,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
     if (storagedCart) {
       return JSON.parse(storagedCart);
-    } else {
-      return [];
-    }
+    } 
 
     return [];
   });
@@ -38,6 +36,10 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
     localStorage.setItem('@RocketShoes:cart', JSON.stringify(cart))
   }, [cart]);
 
+<<<<<<< HEAD
+=======
+  console.log(cart)
+>>>>>>> aec305b361e29fbbfa7f9f8da2acaca272094091
 
   const addProduct = async (productId: number) => {
     try {
