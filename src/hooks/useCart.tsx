@@ -38,10 +38,6 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
     localStorage.setItem('@RocketShoes:cart', JSON.stringify(cart))
   }, [cart]);
 
-  console.log(cart)
-
-
-
 
   const addProduct = async (productId: number) => {
     try {
