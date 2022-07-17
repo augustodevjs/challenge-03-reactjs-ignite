@@ -1,23 +1,7 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import { api } from '../services/api';
-import { Product, Stock } from '../types';
-
-interface CartProviderProps {
-  children: ReactNode;
-}
-
-interface UpdateProductAmount {
-  productId: number;
-  amount: number;
-}
-
-interface CartContextData {
-  cart: Product[];
-  addProduct: (productId: number) => Promise<void>;
-  removeProduct: (productId: number) => void;
-  updateProductAmount: ({ productId, amount }: UpdateProductAmount) => void;
-}
+import { CartContextData, CartProviderProps, Product, UpdateProductAmount } from '../types';
 
 const CartContext = createContext<CartContextData>({} as CartContextData);
 
@@ -31,7 +15,6 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
     return [];
   });
-
 
   const addProduct = async (productId: number) => {
     try {
@@ -96,7 +79,6 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       }
 
       const stock = await api.get(`/stock/${productId}`);
-
       const stockAmount = stock.data.amount;
 
       if(amount > stockAmount) {
