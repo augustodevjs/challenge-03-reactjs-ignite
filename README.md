@@ -4,6 +4,9 @@
    <img src="https://user-images.githubusercontent.com/90275457/179577476-64b140e8-1ff7-4e60-b2ca-d8cd4b595183.png" width="800px">
 </div>
 
+
+Nesse desafio, o principal objetivo é criar um hook de carrinho de compras que simule um E-commerce, onde você pode escolher os produtos e adicioná-los ao carrinho, alterando a quantidade, visualizando o subtotal e o preço total do pedido.
+
 ## :computer: Tecnologias
 Este projeto utiliza as seguintes tecnologias:
 
